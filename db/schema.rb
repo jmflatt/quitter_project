@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150107175341) do
+ActiveRecord::Schema.define(version: 20150112194418) do
 
-  create_table "quitters", force: true do |t|
+  create_table "quitters", force: true do |t| 
     t.string "name"
     t.string "start_date"
     t.string "times_per_week"
     t.string "cost_per_pack"
+    t.string "user_name"
   end
 
-  add_index "quitters", ["name"], name: "index_quitters_on_name", unique: true
+  add_index "quitters", ["user_name"], name: "index_quitters_on_user_name", unique: true
 
   create_table "users", force: true do |t|
     t.string   "name"

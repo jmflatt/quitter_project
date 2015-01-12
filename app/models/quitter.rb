@@ -14,7 +14,7 @@ end
 
 validates :times_per_week, presence: true, length: {maximum: 2}, numericality: { greater_than: 0}
 validates :cost_per_pack, presence: true, length: {maximum: 10}, numericality: { greater_than: 0}  
-  
+validates :user_name, presence: true, length: {maximum: 10}  
 
 
 end

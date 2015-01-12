@@ -34,6 +34,6 @@ class QuittersController < ApplicationController
     
       def quitter_params
         params.require(:quitter).permit(:name, :start_date, :cost_per_pack, 
-                                     :times_per_week)
+                                     :times_per_week, :user_name)
       end  
 end
