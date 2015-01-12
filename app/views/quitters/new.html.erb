@@ -1,0 +1,26 @@
+<% provide(:title, 'Information') %>
+<h1>Enter Your Information</h1>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        
+      <%= form_for(@quitter) do |f| %>
+        <%= render 'shared/quitter_error_messages' %>
+      
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+        
+        <%= f.label :start_date %>
+        <%= f.text_field :start_date, class: 'form-control', placeholder: 'DD/MM/YYYY' %>
+        
+        <%= f.label :times_per_week %>
+        <%= f.text_field :times_per_week, class: 'form-control' %>
+        
+        <%= f.label :cost_per_pack %>
+        <%= f.text_field :cost_per_pack, class: 'form-control' %>
+        
+        <%= f.submit "My Results", classA: "btn btn-primary" %>
+        <% end %>
+        
+    </div>
+</div>
+

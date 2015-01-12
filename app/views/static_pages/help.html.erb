@@ -8,7 +8,13 @@
         <%= javascript_include_tag 'application','data-turbolinks-track' => true %>
         <%= csrf_meta_tags %>
     </head>
+    
     <body>
+        <h1> <%= "start date: " + @starting_time.to_formatted_s(:long_ordinal) %></h1>
+        <h1> <%= "right now: " + @time.to_formatted_s(:long_ordinal) %></h1>
+        <h1> <%= "Its been " + @how_long.to_s + " days" %></h1>
+        <h1> <%= "You've saved $" + @saved_amount.round(2).to_s + " to date" %></h1>
+        <h1> <%= "You've avoided " + @amount_avoided.round(0).to_s + " to date and reclaimed " + hourly(@time_regained).to_s + " minutes of your time" %></h1>
         <%= yield %>
     </body>
 </html>
