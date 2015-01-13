@@ -12,9 +12,21 @@ validates_each :start_date do |record, attr, value|
   end
 end
 
-validates :times_per_week, presence: true, length: {maximum: 2}, numericality: { greater_than: 0}
-validates :cost_per_pack, presence: true, length: {maximum: 10}, numericality: { greater_than: 0}  
-validates :user_name, presence: true, length: {maximum: 10}  
+validates :times_per_week, presence: true, 
+                           length: {maximum: 2}, 
+                           numericality: { greater_than: 0}
+                           
+validates :cost_per_pack, presence: true, 
+                          length: {maximum: 10}, 
+                          numericality: { greater_than: 0}  
+
+validates :user_name, presence: true, 
+                      length: {maximum: 10}, 
+                      uniqueness: { case_sensitive: false }  
 
 
+
+def to_param
+  "#{id}-#{username}"
+end 
 end

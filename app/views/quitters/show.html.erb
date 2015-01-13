@@ -2,16 +2,12 @@
 <div class="row">
     <aside class="col-md-4">
         <section class="user_info">
-        <!--<%= form_for @quitter, :url => quitters_path(:id => @quitter.name) do |f|%>-->
             
             
             <h2><%= @quitter.user_name %></h2>  
               <h1><%= 'Your start date was ' + to_long_date(@quitter.start_date) %></h1>
               <h1><%= 'It has been ' + @how_long.to_s + ' days'%></h1>
-              
-              
               <h1><%= 'You have saved $' + @how_much.to_s + ' since you began'%></h1>
-              <% end %> 
         </section>
     </aside>
 </div>

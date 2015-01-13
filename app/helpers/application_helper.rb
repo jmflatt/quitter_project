@@ -23,6 +23,8 @@ module ApplicationHelper
     updated_date.to_formatted_s(:long_ordinal)
   end 
   
+  
+
   # def how_long_and_how_much?(start_date, times_per_week, cost_per_pack)
 
   # end  
